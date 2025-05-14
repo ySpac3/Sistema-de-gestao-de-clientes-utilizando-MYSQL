@@ -39,17 +39,3 @@ while True:
 cursor.close()
 connection.close()
 
-
-# CREATE
-
-# nome = "PEDRO PEREIRA"
-# plano = "Tv + Internet"
-
-
-
-# READ
-
-
-
-# UPDADE
-# DELETE
