@@ -21,16 +21,7 @@ while True:
             cursor.execute(comando)
             connection.commit()
         case 2:
-            dt = {'nome': [],'plano': []}
-            comando = f'SELECT nome_cliente,plano FROM clientes'
-            cursor.execute(comando)
-            result = cursor.fetchall()
-            
-            for i in range(len(result)):
-                dt['nome'].append(result[i][0])
-                dt['plano'].append(result[i][1])
-            
-            df = pd.DataFrame(dt)
+            df = pd.read_sql(f"Select * FROM clientes", connection)
             print(df)
             
 
@@ -39,3 +30,17 @@ while True:
 cursor.close()
 connection.close()
 
+
+# CREATE
+
+# nome = "PEDRO PEREIRA"
+# plano = "Tv + Internet"
+
+
+
+# READ
+
+
+
+# UPDADE
+# DELETE
